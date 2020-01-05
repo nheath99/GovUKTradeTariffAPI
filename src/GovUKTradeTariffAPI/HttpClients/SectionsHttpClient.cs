@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace GovUKTradeTariffAPI.HttpRequests
+namespace GovUKTradeTariffAPI.HttpClients
 {
 	public class SectionsHttpClient
 	{

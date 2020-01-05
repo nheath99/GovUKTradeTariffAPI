@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Net.Http;
-using GovUKTradeTariffAPI.HttpRequests;
+using GovUKTradeTariffAPI.HttpClients;
 
 namespace GovUKTradeTariffAPI
 {
@@ -8,15 +8,23 @@ namespace GovUKTradeTariffAPI
 	{
 		public TradeTariffApiClient(IHttpClientFactory httpClientFactory)
 		{
-			HttpClient = httpClientFactory.CreateClient("tradeTariffApiClient");
-			HttpClient.BaseAddress = new Uri($"{BaseUrl}/{Version}/");
+			HttpClientFactory = httpClientFactory;
 		}
 
 		public const string BaseUrl = "https://www.trade-tariff.service.gov.uk/api";
 		public const string Version = "v2";
 
-		internal HttpClient HttpClient { get; private set; }
+		internal IHttpClientFactory HttpClientFactory { get; private set; }
 
-		public SectionsHttpClient Sections { get; set; }
+		public SectionsHttpClient Sections => new SectionsHttpClient(GenerateClient());
+
+		private HttpClient GenerateClient()
+		{
+			var client = HttpClientFactory.CreateClient();
+			
+			client.BaseAddress = new Uri($"{BaseUrl}/{Version}/");
+
+			return client;
+		}
 	}
 }
