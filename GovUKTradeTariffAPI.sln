@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GovUKTradeTariffAPI", "src\GovUKTradeTariffAPI\GovUKTradeTariffAPI.csproj", "{8D6482F4-D3E2-4F05-9980-5E26614A307B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D6482F4-D3E2-4F05-9980-5E26614A307B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D6482F4-D3E2-4F05-9980-5E26614A307B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D6482F4-D3E2-4F05-9980-5E26614A307B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D6482F4-D3E2-4F05-9980-5E26614A307B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56AE077F-67A0-45CC-B618-8C75F59D641F}
+	EndGlobalSection
+EndGlobal
