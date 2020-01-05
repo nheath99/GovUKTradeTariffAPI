@@ -5,7 +5,7 @@ namespace GovUKTradeTariffAPI
 	/// <summary>
 	/// A geographical_area object referenced elsewhere.
 	/// </summary>
-	public class ReferencedGeographicalArea
+	public class ReferencedGeographicalArea : IHeadingChangesIncluded, ICommodityIncluded, ICommodityChangesIncluded, IQuotaSearchIncluded
 	{
 		[JsonProperty("id")]
 		public string Id { get; set; }

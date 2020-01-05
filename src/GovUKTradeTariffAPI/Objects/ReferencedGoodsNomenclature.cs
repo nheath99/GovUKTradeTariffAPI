@@ -5,7 +5,7 @@ namespace GovUKTradeTariffAPI
 	/// <summary>
 	/// A goods_nomenclature object referenced elsewhere.
 	/// </summary>
-	public class ReferencedGoodsNomenclature
+	public class ReferencedGoodsNomenclature : IFootnoteSearchIncluded, IAdditionalCodeSearchIncluded, ICertificateSearchIncluded
 	{
 		[JsonProperty("goods_nomenclature_item_id")]
 		public string GoodsNomenclatureItemId { get; set; }

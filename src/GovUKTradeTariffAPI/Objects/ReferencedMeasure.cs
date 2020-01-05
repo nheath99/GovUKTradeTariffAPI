@@ -5,7 +5,7 @@ namespace GovUKTradeTariffAPI
 	/// <summary>
 	/// A measure object referenced elsewhere.
 	/// </summary>
-	public class ReferencedMeasure
+	public class ReferencedMeasure : IFootnoteSearchIncluded, IHeadingChangesIncluded, ICommodityIncluded, ICommodityChangesIncluded, IQuotaSearchIncluded, IAdditionalCodeSearchIncluded, ICertificateSearchIncluded
 	{
 		[JsonProperty("id")]
 		public string Id { get; set; }

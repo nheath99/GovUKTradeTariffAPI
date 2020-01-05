@@ -1,11 +1,11 @@
 ﻿using Newtonsoft.Json;
 
-namespace GovUKTradeTariffAPI.Objects
+namespace GovUKTradeTariffAPI
 {
 	/// <summary>
 	/// A commodity object referenced elsewhere.
 	/// </summary>
-	public class ReferencedCommodity
+	public class ReferencedCommodity : IHeadingIncluded, ICommodityIncluded, IQuotaSearchIncluded
 	{
 		[JsonProperty("description")]
 		public string Description { get; set; }

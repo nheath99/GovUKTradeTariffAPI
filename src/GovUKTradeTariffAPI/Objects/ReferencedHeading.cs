@@ -5,7 +5,7 @@ namespace GovUKTradeTariffAPI
 	/// <summary>
 	/// A heading object referenced elsewhere.
 	/// </summary>
-	public class ReferencedHeading
+	public class ReferencedHeading : IChapterIncluded
 	{
 		[JsonProperty("goods_nomenclature_sid")]
 		public int? GoodsNomenclatureSid { get; set; }

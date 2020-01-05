@@ -5,7 +5,7 @@ namespace GovUKTradeTariffAPI
 	/// <summary>
 	/// A chapter object referenced elsewhere.
 	/// </summary>
-	public class ReferencedChapter
+	public class ReferencedChapter : IHeadingIncluded, ICommodityIncluded, IQuotaSearchIncluded
 	{
 		[JsonProperty("goods_nomenclature_item_id")]
 		public string GoodsNomenclatureItemId { get; set; }
