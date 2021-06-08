@@ -2,7 +2,7 @@
 
 namespace GovUKTradeTariffAPI
 {
-	public abstract class ReferencedElement<T>
+	public class ReferencedElement<T>
 	{
 		[JsonProperty("id")]
 		public string Id { get; set; }

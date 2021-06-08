@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
+using OneOf;
 
 namespace GovUKTradeTariffAPI
 {
@@ -12,6 +13,15 @@ namespace GovUKTradeTariffAPI
 		/// Zero, one or many referenced commodity objects, referenced chapter objects, referenced guide objects, referenced measure objects, referenced geographical area objects objects.
 		/// </summary>
 		[JsonProperty("included")]
-		public IEnumerable<ICommodityIncluded> Included { get; set; }
+		public List<OneOf<
+			ReferencedElement<ReferencedCommodity>, 
+			ReferencedElement<ReferencedChapter>, 
+			ReferencedElement<ReferencedGuide>, 
+			ReferencedElement<ReferencedMeasure>, 
+			ReferencedElement<ReferencedSection>,
+			ReferencedElement<ReferencedHeading>,
+			ReferencedElement<ReferencedFootnote>,
+			ReferencedElement<ReferencedDutyExpression>,
+			ReferencedElement<ReferencedOther>>> Included { get; set; }
 	}
 }
